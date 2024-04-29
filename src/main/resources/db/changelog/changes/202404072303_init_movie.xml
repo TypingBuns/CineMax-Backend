@@ -8,38 +8,38 @@
 
     <changeSet id="202404072303_init_movie" author="Budzin">
         <createTable tableName="movie">
-            <column name="id" type="SERIAL" >
+            <column name="id" type="SERIAL">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="poster" type="BYTEA">
-                <constraints nullable="true" />
-            </column>
             <column name="title" type="VARCHAR(255)">
-                <constraints nullable="false" />
+                <constraints nullable="false"/>
             </column>
-            <column name="director" type="VARCHAR(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="short_description" type="TEXT">
-                <constraints nullable="true" />
-            </column>
-            <column name="release_date" type="DATE">
-                <constraints nullable="true" />
-            </column>
-            <column name="duration" type="INTEGER">
-                <constraints nullable="true" />
-            </column>
-            <column name="language_version" type="VARCHAR(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="trailer_link" type="VARCHAR(500)">
-                <constraints nullable="true" />
+            <column name="original_title" type="VARCHAR(255)">
+                <constraints nullable="true"/>
             </column>
             <column name="categories" type="VARCHAR(255)">
-                <constraints nullable="true" />
+                <constraints nullable="true"/>
             </column>
-            <column name="age_restriction" type="INTEGER">
-                <constraints nullable="true" />
+            <column name="country" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="duration" type="INTEGER">
+                <constraints nullable="true"/>
+            </column>
+            <column name="year_of_production" type="INTEGER">
+                <constraints nullable="true"/>
+            </column>
+            <column name="description" type="TEXT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="trailer_link" type="VARCHAR(500)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="poster" type="BYTEA">
+                <constraints nullable="true"/>
+            </column>
+            <column name="release_date" type="DATE">
+                <constraints nullable="true"/>
             </column>
         </createTable>
     </changeSet>

@@ -23,29 +23,29 @@ public class MovieService {
         if (posterFile != null && !posterFile.isEmpty()) {
             movie.setPoster(posterFile.getBytes());
         }
-
         return movieRepository.save(movie);
     }
 
     @Transactional
     public Movie updateMovie(Long id, String movieJson, MultipartFile posterFile) throws IOException {
-
-        Movie movieDetails = objectMapper.readValue(movieJson, Movie.class);
         Movie movie = movieRepository.findById(id).orElse(null);
+        Movie movieDetails = objectMapper.readValue(movieJson, Movie.class);
+        if (movie != null) {
             movie.setTitle(movieDetails.getTitle());
-            movie.setDirector(movieDetails.getDirector());
+            movie.setOriginalTitle(movieDetails.getOriginalTitle());
             movie.setCategories(movieDetails.getCategories());
+            movie.setCountry(movieDetails.getCountry());
             movie.setDuration(movieDetails.getDuration());
-            movie.setAgeRestriction(movieDetails.getAgeRestriction());
-            movie.setLanguageVersion(movieDetails.getLanguageVersion());
-            movie.setShortDescription(movieDetails.getShortDescription());
+            movie.setYearOfProduction(movieDetails.getYearOfProduction());
+            movie.setReleaseDate(movieDetails.getReleaseDate());
+            movie.setDescription(movieDetails.getDescription());
             movie.setTrailerLink(movieDetails.getTrailerLink());
             movie.setReleaseDate(movieDetails.getReleaseDate());
-
             if (posterFile != null && !posterFile.isEmpty()) {
                 movie.setPoster(posterFile.getBytes());
             }
-
             return movieRepository.save(movie);
+        }
+        return null;
     }
 }

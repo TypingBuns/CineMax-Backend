@@ -1,4 +1,5 @@
 package com.example.CineMax.Controller;
+
 import com.example.CineMax.Entity.Movie;
 import com.example.CineMax.Repository.MovieRepository;
 import com.example.CineMax.Service.MovieService;
@@ -25,28 +26,28 @@ public class MovieController {
     @PostMapping(consumes = {"multipart/form-data"})
     public ResponseEntity<Movie> createMovie(
             @RequestParam("movie") String movieJson,
-            @RequestParam("poster") MultipartFile posterFile) throws IOException {
+            @RequestPart("poster") MultipartFile posterFile) throws IOException {
         Movie movie = movieService.createMovie(movieJson, posterFile);
         return ResponseEntity.ok(movie);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Movie> findMovieById(@PathVariable Long id) {
-        Movie movie = movieRepository.findById(id).orElse(null);
-        if(movie != null){
-            return ResponseEntity.ok(movie);
-        }
-        return ResponseEntity.notFound().build();
+        return movieRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PutMapping(value = "/{id}", consumes = "multipart/form-data")
+    @PutMapping("/{id}")
     public ResponseEntity<Movie> updateMovie(
             @PathVariable Long id,
             @RequestParam("movie") String movieJson,
             @RequestPart("poster") MultipartFile posterFile) throws IOException {
-
         Movie movie = movieService.updateMovie(id, movieJson, posterFile);
-        return ResponseEntity.ok(movie);
+        if (movie != null) {
+            return ResponseEntity.ok(movie);
+        }
+        return ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")
@@ -55,5 +56,3 @@ public class MovieController {
         return ResponseEntity.ok().build();
     }
 }
-
-

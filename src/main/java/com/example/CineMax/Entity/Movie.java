@@ -1,4 +1,5 @@
 package com.example.CineMax.Entity;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -6,43 +7,41 @@ import lombok.Setter;
 import java.util.Date;
 
 @Entity
-@Table(name = "movie")
 @Getter
 @Setter
+@Table(name = "movie")
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private byte[] poster;
-
     @Column(nullable = false)
     private String title;
 
-    @Column
-    private String director;
+    @Column(nullable = true)
+    private String originalTitle;
 
-    @Column
-    private String shortDescription;
-
-    @Column
-    @Temporal(TemporalType.DATE)
-    private Date releaseDate;
-
-    @Column
-    private Integer duration;
-
-    @Column
-    private String languageVersion;
-
-    @Column
-    private String trailerLink;
-
-    @Column
+    @Column(nullable = true)
     private String categories;
 
-    @Column
-    private Integer ageRestriction;
-}
+    @Column(nullable = true)
+    private String country;
 
+    @Column(nullable = true)
+    private Integer duration;
+
+    @Column(nullable = true)
+    private Integer yearOfProduction;
+
+    @Column(nullable = true, length = 10000)
+    private String description;
+
+    @Column(nullable = true)
+    private String trailerLink;
+
+    @Column(name = "poster", nullable = true)
+    private byte[] poster;
+
+    @Column(nullable = true)
+    private Date releaseDate;
+}
