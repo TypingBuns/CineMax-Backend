@@ -10,10 +10,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.Arrays;
@@ -32,10 +33,10 @@ public class MovieTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
+    @Autowired
     private MovieService movieService;
 
-    @MockBean
+    @Autowired
     private MovieRepository movieRepository;
 
     @Autowired
@@ -67,17 +68,20 @@ public class MovieTest {
         movie.setReleaseDate(new Date());
 
         MockMultipartFile jsonFile = new MockMultipartFile("movie", "", "application/json", objectMapper.writeValueAsBytes(movie));
-        MockMultipartFile posterFile = new MockMultipartFile("poster", "file.txt", "text/plain", "some image".getBytes());
+        MockMultipartFile posterFile = new MockMultipartFile("poster", "poster.jpg", "image/jpeg", "<<binary data>>".getBytes());
+        MockMultipartFile bannerFile = new MockMultipartFile("banner", "banner.jpg", "image/jpeg", "<<binary data>>".getBytes());
 
-        when(movieService.createMovie(anyString(), any())).thenReturn(movie);
+        when(movieService.createMovie(anyString(), any(), any())).thenReturn(movie);
 
         mockMvc.perform(multipart("/api/movies")
                         .file(jsonFile)
-                        .file(posterFile))
+                        .file(posterFile)
+                        .file(bannerFile))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.title").value("Inception"))
                 .andDo(print());
     }
+
 
     @Test
     public void findMovieById_ShouldReturnMovie() throws Exception {
@@ -104,20 +108,33 @@ public class MovieTest {
 
     @Test
     public void updateMovie_ShouldUpdateMovie() throws Exception {
-        Movie movie = new Movie();
-        movie.setId(1L);
-        movie.setTitle("Inception");
+        String movieJson = """
+    {
+      "title": "The Shawshank Redemption",
+      "originalTitle": "The Shawshank Redemption",
+      "categories": "Drama, Ligma",
+      "country": "USA",
+      "duration": 142,
+      "yearOfProduction": 1994,
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "trailerLink": "https://example-trailer-link.com",
+      "releaseDate": "1994-10-14"
+    }
+    """;
 
-        MockMultipartFile jsonFile = new MockMultipartFile("movie", "", "application/json", objectMapper.writeValueAsBytes(movie));
-        MockMultipartFile posterFile = new MockMultipartFile("poster", "file.txt", "text/plain", "some image".getBytes());
+        // Tworzenie plików jako MockMultipartFile
+        MockMultipartFile jsonFile = new MockMultipartFile("movie", "", "application/json", movieJson.getBytes());
+        MockMultipartFile posterFile = new MockMultipartFile("poster", "poster.jpg", "image/jpeg", "<<binary data>>".getBytes());
+        MockMultipartFile bannerFile = new MockMultipartFile("banner", "banner.jpg", "image/jpeg", "<<binary data>>".getBytes());
 
-        when(movieService.updateMovie(eq(1L), anyString(), any())).thenReturn(movie);
-
-        mockMvc.perform(multipart("/api/movies/{id}", 1)
+        // Wykonanie żądania PUT z użyciem danych multipart/form-data
+        mockMvc.perform(MockMvcRequestBuilders.multipart("/api/movies/{id}", 1)
                         .file(jsonFile)
-                        .file(posterFile))
+                        .file(posterFile)
+                        .file(bannerFile)
+                        .contentType(MediaType.MULTIPART_FORM_DATA))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.title").value("Inception"))
+                .andExpect(jsonPath("$.title").value("The Shawshank Redemption"))
                 .andDo(print());
     }
 

@@ -42,6 +42,9 @@ public class Movie {
     @Column(name = "poster", nullable = true)
     private byte[] poster;
 
+    @Column(name = "banner", nullable = true)
+    private byte[] banner;
+
     @Column(nullable = true)
     private Date releaseDate;
 }

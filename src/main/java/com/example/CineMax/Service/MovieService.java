@@ -18,34 +18,43 @@ public class MovieService {
     private final ObjectMapper objectMapper;
 
     @Transactional
-    public Movie createMovie(String movieJson, MultipartFile posterFile) throws IOException {
+    public Movie createMovie(String movieJson, MultipartFile posterFile, MultipartFile bannerFile) throws IOException {
         Movie movie = objectMapper.readValue(movieJson, Movie.class);
         if (posterFile != null && !posterFile.isEmpty()) {
             movie.setPoster(posterFile.getBytes());
+        }
+        if (bannerFile != null && !bannerFile.isEmpty()) {
+            movie.setBanner(bannerFile.getBytes());
         }
         return movieRepository.save(movie);
     }
 
     @Transactional
-    public Movie updateMovie(Long id, String movieJson, MultipartFile posterFile) throws IOException {
+    public Movie updateMovie(Long id, String movieJson, MultipartFile posterFile, MultipartFile bannerFile) throws IOException {
         Movie movie = movieRepository.findById(id).orElse(null);
-        Movie movieDetails = objectMapper.readValue(movieJson, Movie.class);
         if (movie != null) {
-            movie.setTitle(movieDetails.getTitle());
-            movie.setOriginalTitle(movieDetails.getOriginalTitle());
-            movie.setCategories(movieDetails.getCategories());
-            movie.setCountry(movieDetails.getCountry());
-            movie.setDuration(movieDetails.getDuration());
-            movie.setYearOfProduction(movieDetails.getYearOfProduction());
-            movie.setReleaseDate(movieDetails.getReleaseDate());
-            movie.setDescription(movieDetails.getDescription());
-            movie.setTrailerLink(movieDetails.getTrailerLink());
-            movie.setReleaseDate(movieDetails.getReleaseDate());
+            Movie movieDetails = objectMapper.readValue(movieJson, Movie.class);
+            updateMovieDetails(movie, movieDetails);
             if (posterFile != null && !posterFile.isEmpty()) {
                 movie.setPoster(posterFile.getBytes());
+            }
+            if (bannerFile != null && !bannerFile.isEmpty()) {
+                movie.setBanner(bannerFile.getBytes());
             }
             return movieRepository.save(movie);
         }
         return null;
+    }
+
+    private void updateMovieDetails(Movie existingMovie, Movie newDetails) {
+        existingMovie.setTitle(newDetails.getTitle());
+        existingMovie.setOriginalTitle(newDetails.getOriginalTitle());
+        existingMovie.setCategories(newDetails.getCategories());
+        existingMovie.setCountry(newDetails.getCountry());
+        existingMovie.setDuration(newDetails.getDuration());
+        existingMovie.setYearOfProduction(newDetails.getYearOfProduction());
+        existingMovie.setDescription(newDetails.getDescription());
+        existingMovie.setTrailerLink(newDetails.getTrailerLink());
+        existingMovie.setReleaseDate(newDetails.getReleaseDate());
     }
 }

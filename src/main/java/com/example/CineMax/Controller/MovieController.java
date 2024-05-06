@@ -23,14 +23,6 @@ public class MovieController {
         return movieRepository.findAll();
     }
 
-    @PostMapping(consumes = {"multipart/form-data"})
-    public ResponseEntity<Movie> createMovie(
-            @RequestParam("movie") String movieJson,
-            @RequestPart("poster") MultipartFile posterFile) throws IOException {
-        Movie movie = movieService.createMovie(movieJson, posterFile);
-        return ResponseEntity.ok(movie);
-    }
-
     @GetMapping("/{id}")
     public ResponseEntity<Movie> findMovieById(@PathVariable Long id) {
         return movieRepository.findById(id)
@@ -38,12 +30,22 @@ public class MovieController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @PostMapping(consumes = {"multipart/form-data"})
+    public ResponseEntity<Movie> createMovie(
+            @RequestParam("movie") String movieJson,
+            @RequestParam("poster") MultipartFile posterFile,
+            @RequestParam("banner") MultipartFile bannerFile) throws IOException {
+        Movie movie = movieService.createMovie(movieJson, posterFile, bannerFile);
+        return ResponseEntity.ok(movie);
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<Movie> updateMovie(
             @PathVariable Long id,
             @RequestParam("movie") String movieJson,
-            @RequestPart("poster") MultipartFile posterFile) throws IOException {
-        Movie movie = movieService.updateMovie(id, movieJson, posterFile);
+            @RequestParam("poster") MultipartFile posterFile,
+            @RequestParam("banner") MultipartFile bannerFile) throws IOException {
+        Movie movie = movieService.updateMovie(id, movieJson, posterFile, bannerFile);
         if (movie != null) {
             return ResponseEntity.ok(movie);
         }
