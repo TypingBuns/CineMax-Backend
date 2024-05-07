@@ -4,7 +4,7 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <changeSet id="202404072303_init_movie" author="Budzin">
         <createTable tableName="movie">
@@ -35,7 +35,7 @@
             <column name="trailer_link" type="VARCHAR(500)">
                 <constraints nullable="true"/>
             </column>
-            <column name="poster" type="BYTEA">
+            <column name="poster" type="VARCHAR(255)">
                 <constraints nullable="true"/>
             </column>
             <column name="release_date" type="DATE">

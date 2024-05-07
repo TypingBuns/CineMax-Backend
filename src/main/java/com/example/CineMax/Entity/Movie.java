@@ -18,33 +18,33 @@ public class Movie {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = true)
+    @Column
     private String originalTitle;
 
-    @Column(nullable = true)
+    @Column
     private String categories;
 
-    @Column(nullable = true)
+    @Column
     private String country;
 
-    @Column(nullable = true)
+    @Column
     private Integer duration;
 
-    @Column(nullable = true)
+    @Column
     private Integer yearOfProduction;
 
-    @Column(nullable = true, length = 10000)
+    @Column(length = 10000)
     private String description;
 
-    @Column(nullable = true)
+    @Column
     private String trailerLink;
 
-    @Column(name = "poster", nullable = true)
-    private byte[] poster;
+    @Column(name = "poster",length = 255)
+    private String poster;
 
-    @Column(name = "banner", nullable = true)
-    private byte[] banner;
+    @Column(name = "banner", length = 255)
+    private String banner;
 
-    @Column(nullable = true)
+    @Column
     private Date releaseDate;
 }
