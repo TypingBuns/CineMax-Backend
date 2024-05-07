@@ -57,6 +57,22 @@ public class MovieService {
         return null;
     }
 
+    public void loadImages(Movie movie) {
+        try {
+            if (movie.getPoster() != null) {
+                Path posterPath = Paths.get(movie.getPoster());
+                movie.setPosterImage(Files.readAllBytes(posterPath));
+            }
+            if (movie.getBanner() != null) {
+                Path bannerPath = Paths.get(movie.getBanner());
+                movie.setBannerImage(Files.readAllBytes(bannerPath));
+            }
+        } catch (IOException e) {
+            // Obsługa błędów, np. logowanie
+            e.printStackTrace();
+        }
+    }
+
     private String saveFile(MultipartFile file, String folderName) throws IOException {
         Path directoryPath = Paths.get(uploadDir, folderName);
         if (!Files.exists(directoryPath)) {

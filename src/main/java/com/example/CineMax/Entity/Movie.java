@@ -47,4 +47,10 @@ public class Movie {
 
     @Column
     private Date releaseDate;
+
+    @Transient
+    private byte[] posterImage;
+
+    @Transient
+    private byte[] bannerImage;
 }
