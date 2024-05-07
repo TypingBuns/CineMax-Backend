@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="202405080036_insert_movies" author="Budzin">
+        <!-- Kaskader -->
+        <insert tableName="movie">
+            <column name="title" value="Kaskader"/>
+            <column name="original_title" value="The Fall Guy"/>
+            <column name="categories" value="Akcja"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="127"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Colt Seavers porzuca zawód kaskadera. Gdy znika gwiazda wysokobudżetowego filmu w reżyserii jego ex, decyduje się wrócić do branży."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=vcJxHPJulws"/>
+            <column name="release_date" value="2024-05-03"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/kaskader.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/kaskader-banner.jpg"/>
+        </insert>
+
+        <!-- Challengers -->
+        <insert tableName="movie">
+            <column name="title" value="Challengers"/>
+            <column name="original_title" value="Challengers"/>
+            <column name="categories" value="Dramat,Sportowy"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="131"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Tashi, była gwiazda tenisa, zostaje trenerką swojego męża, który aby przerwać pasmo porażek musi zmierzyć się na korcie ze swoim byłym najlepszym przyjacielem, a przy tym byłym partnerem żony."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=lW-34U5tgiE"/>
+            <column name="release_date" value="2024-04-26"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/challengers.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/challengers-banner.jpg"/>
+        </insert>
+
+        <!-- Back to black. Historia Amy Winehouse -->
+        <insert tableName="movie">
+            <column name="title" value="Back to black. Historia Amy Winehouse"/>
+            <column name="original_title" value="Back to black"/>
+            <column name="categories" value="Biograficzny"/>
+            <column name="country" value="Wielka Brytania,USA,Francja"/>
+            <column name="duration" valueNumeric="121"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Historia życia i kariery wokalistki Amy Winehouse."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=k0_jTNxzGWc"/>
+            <column name="release_date" value="2024-04-19"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/back-to-black.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/back-to-black-banner.jpg"/>
+        </insert>
+
+        <!-- Mój pies Artur -->
+        <insert tableName="movie">
+            <column name="title" value="Mój pies Artur"/>
+            <column name="original_title" value="Arthur the King"/>
+            <column name="categories" value="Przygodowy"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="97"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Sportowiec przygarnia bezdomnego psa, aby towarzyszył mu w niezwykle trudnych zawodach wytrzymałościowych."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=_koQEI34KSQ"/>
+            <column name="release_date" value="2024-04-26"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/moj-pies-artur.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/moj-pies-artur-banner.jpg"/>
+        </insert>
+
+        <!-- Supersiostry -->
+        <insert tableName="movie">
+            <column name="title" value="Supersiostry"/>
+            <column name="original_title" value="Supersiostry"/>
+            <column name="categories" value="Sci-Fi"/>
+            <column name="country" value="Polska"/>
+            <column name="duration" valueNumeric="105"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Obdarzone nadprzyrodzonymi mocami siostry mogą stać się superbronią albo superbohaterkami."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=8lpoimkJVis"/>
+            <column name="release_date" value="2024-05-10"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/supersiostry.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/supersiostry-banner.jpg"/>
+        </insert>
+
+        <!-- Istoty fantastyczne -->
+        <insert tableName="movie">
+            <column name="title" value="Istoty fantastyczne"/>
+            <column name="original_title" value="Imaginary Friends"/>
+            <column name="categories" value="Dramat,Familijny,Komedia"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="108"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Historia dziewczynki, która odkrywa, że może zobaczyć wyimaginowanych przyjaciół wszystkich, których zna. Co robi z tą supermocą? Wyruszy w magiczną przygodę, aby połączyć zapomniane istoty fantastyczne z tymi, dla których są ważne."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=EN-a6AH2ZNE"/>
+            <column name="release_date" value="2024-05-15"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/istoty-fantastyczne.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/istoty-fantastyczne-banner.jpg"/>
+        </insert>
+
+        <!-- Niepokalana -->
+        <insert tableName="movie">
+            <column name="title" value="Niepokalana"/>
+            <column name="original_title" value="Immaculate"/>
+            <column name="categories" value="Horror"/>
+            <column name="country" value="USA,Włochy"/>
+            <column name="duration" valueNumeric="89"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Gdy młoda zakonnica odkrywa, że jest w ciąży, w jej klasztorze zaczyna się mówić o cudzie. Wkrótce zaczyna ona jednak podejrzewać, że została wybrana do wypełnienia misji, która może doprowadzić ją do zguby."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=C8qgSgPeDh4"/>
+            <column name="release_date" value="2024-04-26"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/niepokalana.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/niepokalana-banner.jpg"/>
+        </insert>
+
+        <!-- Spy x Family Code: White -->
+        <insert tableName="movie">
+            <column name="title" value="Spy x Family Code: White"/>
+            <column name="original_title" value="Gekijōban Spy × Family Code: White"/>
+            <column name="categories" value="Komedia,Akcja,Anime"/>
+            <column name="country" value="Japonia"/>
+            <column name="duration" valueNumeric="110"/>
+            <column name="year_of_production" valueNumeric="2023"/>
+            <column name="description" value="On jest szpiegiem. Ona jest zabójczynią. Loid i Yor prowadzą podwójne życie, jednocześnie udając idealną rodzinę. Jednak ich adoptowana córka Anya, telepatka, wie o ich ekscytujących sekretach. Pod przykrywką zabrania rodziny na weekendowy zimowy wypad, Loid pracuje nad swoją obecną misją. Operacja Strix okazuje się być trudna, zwłaszcza że Anya przypadkowo się w nią wplątuje i inicjuje wydarzenia, które zagrażają pokojowi na świecie!"/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=eGeGOXrZ7ak"/>
+            <column name="release_date" value="2024-04-26"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/spy-x-family-code-white.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/spy-x-family-code-white-banner.jpg"/>
+        </insert>
+
+        <!-- Królestwo Planety Małp -->
+        <insert tableName="movie">
+            <column name="title" value="Królestwo Planety Małp"/>
+            <column name="original_title" value="Kingdom of the Planet of the Apes"/>
+            <column name="categories" value="Akcja,Sci-Fi"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="145"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="W świecie zdominowanym przez żyjące w harmonii małpy ludzie zostali zepchnięci na margines. Gdy nowy przywódca małp buduje swoje imperium, młody samiec wyrusza w niezwykle trudną podróż, która zmieni jego dotychczasowe wyobrażenie o przeszłości, a nowe decyzje wpłyną na przyszłość zarówno małp, jak i ludzi."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=n-ANrXYx-tY"/>
+            <column name="release_date" value="2024-05-10"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/krolestwo-planety-malp.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/krolestwo-planety-malp-banner.jpg"/>
+        </insert>
+
+        <!-- Furiosa: Saga Mad Max -->
+        <insert tableName="movie">
+            <column name="title" value="Furiosa: Saga Mad Max"/>
+            <column name="original_title" value="Furiosa: A Mad Max Saga"/>
+            <column name="categories" value="Sensacyjny,Sci-Fi"/>
+            <column name="country" value="Australia,USA"/>
+            <column name="duration" valueNumeric="148"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Kiedy świat upada, młoda Furiosa zostaje uprowadzona z Zielonego Miejsca Wielu Matek. Wpada w ręce potężnej Hordy Bikerów, której przewodzi watażka Dementus. Po przebyciu Pustkowi porywacze docierają do Cytadeli, gdzie rządzi Wieczny Joe. Dwóch tyranów zaczyna walkę o władzę, Furiosa zaś musi przetrwać wiele prób, jednocześnie gromadząc środki, które pozwolą jej wrócić do domu."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=O9Rghj9zym4"/>
+            <column name="release_date" value="2024-05-24"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/furiosa-saga-mad-max.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/furiosa-saga-mad-max-banner.jpg"/>
+        </insert>
+
+        <!-- Garfield -->
+        <insert tableName="movie">
+            <column name="title" value="Garfield"/>
+            <column name="original_title" value="The Garfield Movie"/>
+            <column name="categories" value="Animacja,Familijny,Komedia"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="101"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Garfield jest najbardziej znanym kotem na świecie. Jest leniuchem, który uwielbia lasagne i nie cierpi poniedziałków.  Po nieoczekiwanym spotkaniu ze swoim dawno zaginionym ojcem - niechlujnym ulicznym kotem Vicem - Garfield i jego psi przyjaciel Odie zmuszeni są porzucić swoje doskonałe leniwe życie i dołączyć do Vica w zabawnym napadzie."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=ss5YWwpER5g"/>
+            <column name="release_date" value="2024-05-31"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/garfield.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/garfield-banner.jpg"/>
+        </insert>
+
+        <!-- W głowie się nie mieści 2 -->
+        <insert tableName="movie">
+            <column name="title" value="W głowie się nie mieści 2"/>
+            <column name="original_title" value="Inside Out 2"/>
+            <column name="categories" value="Animacja,Komedia"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="100"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Riley jest już nastolatką. W jej życiu pojawiają się nowe emocje, które kształtują osobowość dorastającej dziewczyny."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=F_qy01RcA_s"/>
+            <column name="release_date" value="2024-06-14"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/w-glowie-sie-nie-miesci-2.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/w-glowie-sie-nie-miesci-2-banner.jpg"/>
+        </insert>
+
+        <!-- Hit Man -->
+        <insert tableName="movie">
+            <column name="title" value="Hit Man"/>
+            <column name="original_title" value="Hit Man"/>
+            <column name="categories" value="Komedia,Akcja"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="115"/>
+            <column name="year_of_production" valueNumeric="2023"/>
+            <column name="description" value="Śledczy Gary Johnson wciela się w płatnego zabójcę, aby złapać osoby zlecające morderstwa."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=bkcgY7O3aZs"/>
+            <column name="release_date" value="2024-05-17"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/hit-man.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/hit-man-banner.jpg"/>
+        </insert>
+
+        <!-- Jedno życie -->
+        <insert tableName="movie">
+            <column name="title" value="Jedno życie"/>
+            <column name="original_title" value="One Life"/>
+            <column name="categories" value="Biograficzny,Dramat,Wojenny"/>
+            <column name="country" value="Wielka Brytania"/>
+            <column name="duration" valueNumeric="110"/>
+            <column name="year_of_production" valueNumeric="2023"/>
+            <column name="description" value="Historia Nicholasa Wintona, który w czasie II WŚ zorganizował transport 669 żydowskich dzieci z Czech do Wielkiej Brytanii. Pół wieku po wojnie spotkał się z ocalałymi osobami w programie telewizyjnym."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=kmt9clTxxC8"/>
+            <column name="release_date" value="2024-05-31"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/jedno-zycie.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/jedno-zycie-banner.jpg"/>
+        </insert>
+
+        <!-- Do usług szanownej pani -->
+        <insert tableName="movie">
+            <column name="title" value="Do usług szanownej pani"/>
+            <column name="original_title" value="Complètement cramé!"/>
+            <column name="categories" value="Dramat,Komedia,Romans"/>
+            <column name="country" value="Luksemburg,Francja"/>
+            <column name="duration" valueNumeric="100"/>
+            <column name="year_of_production" valueNumeric="2023"/>
+            <column name="description" value="Owdowiały brytyjski biznesmen podejmuje pracę lokaja w dworku we Francji, aby zachować wspomnienia swojej zmarłej francuskiej żony."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=r2mZGqGr5jI"/>
+            <column name="release_date" value="2024-06-07"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/do-uslug-szanownej-pani.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/do-uslug-szanownej-pani-banner.jpg"/>
+        </insert>
+
+        <!-- Deadpool & Wolverine -->
+        <insert tableName="movie">
+            <column name="title" value="Deadpool &amp; Wolverine"/>
+            <column name="original_title" value="Deadpool &amp; Wolverine"/>
+            <column name="categories" value="Komedia,Akcja,Sci-Fi"/>
+            <column name="country" value="USA,Chiny"/>
+            <column name="duration" valueNumeric="150"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Wolverine dochodzi do siebie po kontuzjach, gdy spotyka Deadpoola. Łączą siły, aby pokonać wspólnego wroga."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=WP0YbYnwhIg"/>
+            <column name="release_date" value="2024-07-26"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/deadpool-&amp;-wolverine.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/deadpool-&amp;-wolverine-banner.jpg"/>
+        </insert>
+
+        <!-- Mój syn Ezra -->
+        <insert tableName="movie">
+            <column name="title" value="Mój syn Ezra"/>
+            <column name="original_title" value="Ezra"/>
+            <column name="categories" value="Komedia"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="100"/>
+            <column name="year_of_production" valueNumeric="2023"/>
+            <column name="description" value="Max, wbrew woli byłej żony, zabiera swojego ukochanego syna w szaloną podróż, dzięki której obaj odkryją na nowo moc łączącej ich relacji."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=MGjubxsIkF0"/>
+            <column name="release_date" value="2024-06-21"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/moj-syn-ezra.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/moj-syn-ezra-banner.jpg"/>
+        </insert>
+
+        <!-- Horyzont. Rozdział 1 -->
+        <insert tableName="movie">
+            <column name="title" value="Horyzont. Rozdział 1"/>
+            <column name="original_title" value="Horizon: An American Saga - Chapter 1"/>
+            <column name="categories" value="Western"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="140"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Tysiące marzycieli, poszukiwaczy lepszego jutra, przemierzają bezkresne terytoria Stanów Zjednoczonych z nadzieją na znalezienie swojego miejsca na Ziemi. Narażeni na ataki rdzennych mieszkańców, broniących swojej ziemi i napaści bandytów szukających łatwego łupu, mierzą się z własnymi słabościami i gniewem natury w drodze ku wymarzonemu celowi. W kraju rozdartym krwawą wojną secesyjną krzyżują się losy szlachetnych i podłych, silnych i słabych, odważnych i tchórzy. Tylko nieliczni z nich dotrą do szczęśliwego kresu tej wielkiej wędrówki."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=EDienYjvEMk"/>
+            <column name="release_date" value="2024-06-28"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/horyzont-rozdzial-1.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/horyzont-rozdzial-1-banner.jpg"/>
+        </insert>
+
+        <!-- Gru i Minionki: Pod Przykrywką -->
+        <insert tableName="movie">
+            <column name="title" value="Gru i Minionki: Pod Przykrywką"/>
+            <column name="original_title" value="Despicable Me 4"/>
+            <column name="categories" value="Animacja,Komedia,Przygodowy"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="110"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Gru, Lucy, Margo, Edith i Agnes witają nowego członka rodziny, Gru Juniora, który nie daje spokoju swojemu tacie. Rodzina zostaje zmuszona do ucieczki gdy Gru stawia czoła nowym wrogom - Maxime'owi Le Mal i jego dziewczynie Valentinie."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=8MoJCMc4uTI"/>
+            <column name="release_date" value="2024-07-05"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/gru-i-minionki.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/gru-i-minionki-banner.jpg"/>
+        </insert>
+
+        <!-- Borderlands -->
+        <insert tableName="movie">
+            <column name="title" value="Borderlands"/>
+            <column name="original_title" value="Borderlands"/>
+            <column name="categories" value="Komedia,Akcja,Sci-Fi"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="102"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Film oparty na grze video, w której ludzie szukają relikwii na planecie Pandora."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=OquupR4tpH8"/>
+            <column name="release_date" value="2024-08-09"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/borderlands.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/borderlands-banner.jpg"/>
+        </insert>
+
+        <!-- Transformers: Początek -->
+        <insert tableName="movie">
+            <column name="title" value="Transformers: Początek"/>
+            <column name="original_title" value="Transformers One"/>
+            <column name="categories" value="Komedia,Akcja,Sci-Fi"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="102"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Film animowany &quot;Transformers: Początek&quot; jest inny niż poprzednie filmy akcji. Powraca do początków serii. Wraca do miejsca, w którym wszystko się zaczęło - na Cybertronie, planecie, z której pochodzą Transformery. Historia jest wierna początkom poprzednich komiksów i seriali telewizyjnych. Głównymi bohaterami są Optimus Prime i Megatron, którzy zaczynali jako przyjaciele. Widzowie zobaczą, co stało się z tymi postaciami i jak stali się wrogami. Wyjaśnia również, w jaki sposób rozpoczęła się wojna między Autobotami i Deceptikonami."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=RehzazLnszs"/>
+            <column name="release_date" value="2024-09-20"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/transformers-poczatek.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/transformers-poczatek-banner.jpg"/>
+        </insert>
+
+        <!-- Bulion i inne namiętości -->
+        <insert tableName="movie">
+            <column name="title" value="Bulion i inne namiętości"/>
+            <column name="original_title" value="La passion de Dodin Bouffant"/>
+            <column name="categories" value="Melodramat"/>
+            <column name="country" value="Francja"/>
+            <column name="duration" valueNumeric="145"/>
+            <column name="year_of_production" valueNumeric="2023"/>
+            <column name="description" value="Eugenie od dwudziestu lat pracuje jako kucharka dla słynnego smakosza. Z biegiem lat rodzi się pomiędzy nimi romantyczny związek."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=OOYMv834Gko"/>
+            <column name="release_date" value="2024-08-30"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/bulion-i-inne-namietnosci.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/bulion-i-inne-namietnosci-banner.jpg"/>
+        </insert>
+
+        <!-- Joker: Folie à deux -->
+        <insert tableName="movie">
+            <column name="title" value="Joker: Folie à deux"/>
+            <column name="original_title" value="Joker: Folie à deux"/>
+            <column name="categories" value="Dramat,Kryminał,Musical"/>
+            <column name="country" value="USA"/>
+            <column name="duration" valueNumeric="150"/>
+            <column name="year_of_production" valueNumeric="2024"/>
+            <column name="description" value="Harleen Quinzel, psychiatra w szpitalu Arkham, zakochuje się w tajemniczym pacjencie, Jokerze. Razem próbują uciec z zakładu psychiatrycznego, niosąc ze sobą burzliwy romans pełen szaleństwa i niebezpieczeństwa."/>
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=BguBB0G-guo"/>
+            <column name="release_date" value="2024-10-04"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/joker.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/joker-banner.jpg"/>
+        </insert>
+
+        <!-- Leonardo. Odkrywca -->
+        <insert tableName="movie">
+            <column name="title" value="Leonardo. Odkrywca"/>
+            <column name="original_title" value="The Inventor"/>
+            <column name="categories" value="Animacja,Familijny"/>
+            <column name="country" value="Francja,USA,Irlandia,Luksemburg"/>
+            <column name="duration" valueNumeric="100"/>
+            <column name="year_of_production" valueNumeric="2023"/>
+            <column name="description" value="Leonardo da Vinci nie potrafił zaspokoić swojej ogromnej ciekawości i był przy tym uparty. Opuszcza Włochy, aby zamieszkać na francuskim dworze, gdzie może swobodnie eksperymentować wymyślając maszyny latające, niesamowite pojazdy oraz badając ludzkie ciało. To właśnie we Francji, wspólnie z żądną przygód i zuchwałą księżniczką Marguerite, Leonardo znajdzie odpowiedź na najważniejsze pytanie: &quot;Jaki jest sens tego wszystkiego?&quot;" />
+            <column name="trailer_link" value="https://www.youtube.com/watch?v=HnUHpCJhlMk"/>
+            <column name="release_date" value="2024-09-13"/>
+            <column name="poster" value="src/main/resources/MovieImages/posters/leonardo-odkrywca.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/leonardo-odkrywca-banner.jpg"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
