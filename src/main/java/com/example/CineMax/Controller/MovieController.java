@@ -19,8 +19,10 @@ public class MovieController {
     private final MovieService movieService;
 
     @GetMapping
-    public List<Movie> findAllMovies() {
-        return movieRepository.findAll();
+    public ResponseEntity<List<Movie>> findAllMovies() {
+        List<Movie> movies = movieRepository.findAll();
+        movies.forEach(movieService::loadImages);
+        return ResponseEntity.ok(movies);
     }
 
     @GetMapping("/{id}")
