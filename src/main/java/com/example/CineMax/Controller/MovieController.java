@@ -5,15 +5,18 @@ import com.example.CineMax.Repository.MovieRepository;
 import com.example.CineMax.Service.MovieService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/movies")
+@Validated
 public class MovieController {
     private final MovieRepository movieRepository;
     private final MovieService movieService;
@@ -34,32 +37,5 @@ public class MovieController {
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-
-    @PostMapping(consumes = {"multipart/form-data"})
-    public ResponseEntity<Movie> createMovie(
-            @RequestParam("movie") String movieJson,
-            @RequestParam("poster") MultipartFile posterFile,
-            @RequestParam("banner") MultipartFile bannerFile) throws IOException {
-        Movie movie = movieService.createMovie(movieJson, posterFile, bannerFile);
-        return ResponseEntity.ok(movie);
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Movie> updateMovie(
-            @PathVariable Long id,
-            @RequestParam("movie") String movieJson,
-            @RequestParam("poster") MultipartFile posterFile,
-            @RequestParam("banner") MultipartFile bannerFile) throws IOException {
-        Movie movie = movieService.updateMovie(id, movieJson, posterFile, bannerFile);
-        if (movie != null) {
-            return ResponseEntity.ok(movie);
-        }
-        return ResponseEntity.notFound().build();
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteMovie(@PathVariable Long id) {
-        movieRepository.deleteById(id);
-        return ResponseEntity.ok().build();
-    }
 }
+

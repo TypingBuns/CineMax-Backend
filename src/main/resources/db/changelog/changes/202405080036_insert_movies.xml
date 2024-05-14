@@ -18,7 +18,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=vcJxHPJulws"/>
             <column name="release_date" value="2024-05-03"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/kaskader.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/kaskader-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/kaskader-baner.jpg"/>
         </insert>
 
         <!-- Challengers -->
@@ -33,7 +33,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=lW-34U5tgiE"/>
             <column name="release_date" value="2024-04-26"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/challengers.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/challengers-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/challengers-baner.jpg"/>
         </insert>
 
         <!-- Back to black. Historia Amy Winehouse -->
@@ -48,7 +48,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=k0_jTNxzGWc"/>
             <column name="release_date" value="2024-04-19"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/back-to-black.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/back-to-black-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/back-to-black-baner.jpg"/>
         </insert>
 
         <!-- Mój pies Artur -->
@@ -63,7 +63,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=_koQEI34KSQ"/>
             <column name="release_date" value="2024-04-26"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/moj-pies-artur.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/moj-pies-artur-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/moj-pies-artur-baner.jpg"/>
         </insert>
 
         <!-- Supersiostry -->
@@ -78,7 +78,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=8lpoimkJVis"/>
             <column name="release_date" value="2024-05-10"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/supersiostry.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/supersiostry-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/supersiostry-baner.jpg"/>
         </insert>
 
         <!-- Istoty fantastyczne -->
@@ -93,7 +93,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=EN-a6AH2ZNE"/>
             <column name="release_date" value="2024-05-15"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/istoty-fantastyczne.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/istoty-fantastyczne-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/istoty-fantastyczne-baner.jpg"/>
         </insert>
 
         <!-- Niepokalana -->
@@ -108,7 +108,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=C8qgSgPeDh4"/>
             <column name="release_date" value="2024-04-26"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/niepokalana.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/niepokalana-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/niepokalana-baner.jpg"/>
         </insert>
 
         <!-- Spy x Family Code: White -->
@@ -123,7 +123,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=eGeGOXrZ7ak"/>
             <column name="release_date" value="2024-04-26"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/spy-x-family-code-white.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/spy-x-family-code-white-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/spy-x-family-code-white-baner.jpg"/>
         </insert>
 
         <!-- Królestwo Planety Małp -->
@@ -138,7 +138,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=n-ANrXYx-tY"/>
             <column name="release_date" value="2024-05-10"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/krolestwo-planety-malp.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/krolestwo-planety-malp-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/krolestwo-planety-malp-baner.jpg"/>
         </insert>
 
         <!-- Furiosa: Saga Mad Max -->
@@ -153,7 +153,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=O9Rghj9zym4"/>
             <column name="release_date" value="2024-05-24"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/furiosa-saga-mad-max.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/furiosa-saga-mad-max-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/furiosa-saga-mad-max-baner.jpg"/>
         </insert>
 
         <!-- Garfield -->
@@ -168,7 +168,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=ss5YWwpER5g"/>
             <column name="release_date" value="2024-05-31"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/garfield.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/garfield-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/garfield-baner.jpg"/>
         </insert>
 
         <!-- W głowie się nie mieści 2 -->
@@ -183,7 +183,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=F_qy01RcA_s"/>
             <column name="release_date" value="2024-06-14"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/w-glowie-sie-nie-miesci-2.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/w-glowie-sie-nie-miesci-2-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/w-glowie-sie-nie-miesci-baner.jpg"/>
         </insert>
 
         <!-- Hit Man -->
@@ -198,7 +198,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=bkcgY7O3aZs"/>
             <column name="release_date" value="2024-05-17"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/hit-man.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/hit-man-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/hit-man-baner.jpg"/>
         </insert>
 
         <!-- Jedno życie -->
@@ -213,7 +213,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=kmt9clTxxC8"/>
             <column name="release_date" value="2024-05-31"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/jedno-zycie.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/jedno-zycie-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/jedno-zycie-baner.jpg"/>
         </insert>
 
         <!-- Do usług szanownej pani -->
@@ -228,7 +228,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=r2mZGqGr5jI"/>
             <column name="release_date" value="2024-06-07"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/do-uslug-szanownej-pani.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/do-uslug-szanownej-pani-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/do-uslug-szanownej-pani-baner.jpg"/>
         </insert>
 
         <!-- Deadpool & Wolverine -->
@@ -243,7 +243,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=WP0YbYnwhIg"/>
             <column name="release_date" value="2024-07-26"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/deadpool-&amp;-wolverine.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/deadpool-&amp;-wolverine-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/deadpool-&amp;-wolverine-baner.jpg"/>
         </insert>
 
         <!-- Mój syn Ezra -->
@@ -258,7 +258,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=MGjubxsIkF0"/>
             <column name="release_date" value="2024-06-21"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/moj-syn-ezra.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/moj-syn-ezra-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/moj-syn-ezra-baner.jpg"/>
         </insert>
 
         <!-- Horyzont. Rozdział 1 -->
@@ -273,7 +273,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=EDienYjvEMk"/>
             <column name="release_date" value="2024-06-28"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/horyzont-rozdzial-1.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/horyzont-rozdzial-1-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/horyzont-rozdzial-1-baner.jpg"/>
         </insert>
 
         <!-- Gru i Minionki: Pod Przykrywką -->
@@ -288,7 +288,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=8MoJCMc4uTI"/>
             <column name="release_date" value="2024-07-05"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/gru-i-minionki.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/gru-i-minionki-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/gru-i-minionki-baner.jpg"/>
         </insert>
 
         <!-- Borderlands -->
@@ -303,7 +303,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=OquupR4tpH8"/>
             <column name="release_date" value="2024-08-09"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/borderlands.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/borderlands-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/borderlands-baner.jpg"/>
         </insert>
 
         <!-- Transformers: Początek -->
@@ -318,7 +318,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=RehzazLnszs"/>
             <column name="release_date" value="2024-09-20"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/transformers-poczatek.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/transformers-poczatek-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/transformers-poczatek-baner.jpg"/>
         </insert>
 
         <!-- Bulion i inne namiętości -->
@@ -333,7 +333,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=OOYMv834Gko"/>
             <column name="release_date" value="2024-08-30"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/bulion-i-inne-namietnosci.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/bulion-i-inne-namietnosci-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/bulion-i-inne-namietnosci-baner.jpg"/>
         </insert>
 
         <!-- Joker: Folie à deux -->
@@ -348,7 +348,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=BguBB0G-guo"/>
             <column name="release_date" value="2024-10-04"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/joker.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/joker-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/joker-baner.jpg"/>
         </insert>
 
         <!-- Leonardo. Odkrywca -->
@@ -363,7 +363,7 @@
             <column name="trailer_link" value="https://www.youtube.com/watch?v=HnUHpCJhlMk"/>
             <column name="release_date" value="2024-09-13"/>
             <column name="poster" value="src/main/resources/MovieImages/posters/leonardo-odkrywca.jpg"/>
-            <column name="banner" value="src/main/resources/MovieImages/banners/leonardo-odkrywca-banner.jpg"/>
+            <column name="banner" value="src/main/resources/MovieImages/banners/leonardo-odkrywca-baner.jpg"/>
         </insert>
 
     </changeSet>

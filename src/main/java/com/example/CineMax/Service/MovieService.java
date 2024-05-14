@@ -68,7 +68,6 @@ public class MovieService {
                 movie.setBannerImage(Files.readAllBytes(bannerPath));
             }
         } catch (IOException e) {
-            // Obsługa błędów, np. logowanie
             e.printStackTrace();
         }
     }
