@@ -34,8 +34,8 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/api/admin/movies/**").hasAuthority("ROLE_ADMIN")  // Najpierw najbardziej restrykcyjne ścieżki
-                        .requestMatchers("/api/movies/**").permitAll()  // Następnie ogólniejsze ścieżki
+                        .requestMatchers("/api/admin/movies/**").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/api/movies/**").permitAll()
                         .requestMatchers("/api/register", "/api/login").permitAll()
                         .anyRequest().denyAll()
                 )
@@ -53,9 +53,10 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:3000")); // lub inne dozwolone źródła
+        configuration.setAllowedOrigins(List.of("http://localhost:3000"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("Authorization", "Cache-Control", "Content-Type"));
+        configuration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
